@@ -10,10 +10,5 @@ $this->title = 'My Yii Application';
         <h1>Открыть отызвы</h1>
 
         <?= Html::a('Полный вперед!', ['/reviews/index'], ['class'=>'btn btn-lg btn-success']) ?>
-
-    </div>
-
-    <div class="body-content">
-
     </div>
 </div>

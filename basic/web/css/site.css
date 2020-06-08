@@ -3,6 +3,10 @@ body {
     height: 100%;
 }
 
+.navbar-header a{
+    font-size: xx-large;
+    color: #5cb85c;
+}
 .wrap {
     min-height: 100%;
     height: auto;
