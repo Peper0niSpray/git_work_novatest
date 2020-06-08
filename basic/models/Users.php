@@ -7,9 +7,9 @@ namespace app\models;
  */
 class Users extends base\User implements \yii\web\IdentityInterface
 {
-	public static function findIdentity($Code_users)
+	public static function findIdentity($user_id)
 	{
-		return static::findOne($Code_users);
+		return static::findOne($user_id);
 	}
 
 	public static function findIdentityByAccessToken($token,$type = null)
@@ -23,7 +23,7 @@ class Users extends base\User implements \yii\web\IdentityInterface
 	}
 	public function getId()
 	{
-		return $this->Code_users;
+		return $this->user_id;
 	}
 	public function getAuthKey()
 	{

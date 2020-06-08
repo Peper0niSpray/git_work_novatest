@@ -24,11 +24,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'login') ?>
 
-    <?= $form->field($model, 'password') ?>
-
     <?= $form->field($model, 'reviews_date') ?>
 
-    <?php // echo $form->field($model, 'reviews_text') ?>
+    <?= $form->field($model, 'reviews_text') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

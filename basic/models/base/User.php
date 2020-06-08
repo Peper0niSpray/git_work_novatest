@@ -31,7 +31,7 @@ class User extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_code', 'login', 'password'], 'required'],
+            [['user_code', 'login', 'password'], 'required','message'=>'Поле не может быть пустым.'],
             [['user_code'], 'integer'],
             [['login', 'password'], 'string', 'max' => 255],
             [['user_code'], 'exist', 'skipOnError' => true, 'targetClass' => UserType::className(), 'targetAttribute' => ['user_code' => 'user_code']],

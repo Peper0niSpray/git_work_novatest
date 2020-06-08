@@ -10,7 +10,6 @@ use Yii;
  * @property int $reviews_id
  * @property int $user_id
  * @property string $login
- * @property string $password
  * @property string $reviews_date
  * @property string $reviews_text
  *
@@ -32,10 +31,10 @@ class Reviews extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'login', 'password', 'reviews_date', 'reviews_text'], 'required'],
+            [['user_id', 'login', 'reviews_date', 'reviews_text'], 'required','message'=>'Поле не может быть пустым.'],
             [['user_id'], 'integer'],
             [['reviews_date'], 'safe'],
-            [['login', 'password', 'reviews_text'], 'string', 'max' => 255],
+            [['login', 'reviews_text'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'user_id']],
         ];
     }
@@ -49,7 +48,6 @@ class Reviews extends \yii\db\ActiveRecord
             'reviews_id' => 'Reviews ID',
             'user_id' => 'User ID',
             'login' => 'Login',
-            'password' => 'Password',
             'reviews_date' => 'Reviews Date',
             'reviews_text' => 'Reviews Text',
         ];

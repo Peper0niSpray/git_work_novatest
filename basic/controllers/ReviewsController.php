@@ -8,6 +8,9 @@ use app\models\base\ReviewsSerch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\ActiveDataProvider;
+use yii\filters\AccessControl;
+use yii\data\Pagination;
 
 /**
  * ReviewsController implements the CRUD actions for Reviews model.
@@ -38,6 +41,7 @@ class ReviewsController extends Controller
         $searchModel = new ReviewsSerch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

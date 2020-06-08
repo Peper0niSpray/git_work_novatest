@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
+use yii\widgets\LinkPager;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\base\ReviewsSerch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -30,13 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'reviews_id',
             'user_id',
             'login',
-            'password',
             'reviews_date',
-            //'reviews_text',
+            'reviews_text',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
-    ]); ?>
+    ]); 
+    ?>
 
     <?php Pjax::end(); ?>
 

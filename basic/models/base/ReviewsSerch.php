@@ -18,7 +18,7 @@ class ReviewsSerch extends Reviews
     {
         return [
             [['reviews_id', 'user_id'], 'integer'],
-            [['login', 'password', 'reviews_date', 'reviews_text'], 'safe'],
+            [['login', 'reviews_date', 'reviews_text'], 'safe'],
         ];
     }
 
@@ -64,7 +64,6 @@ class ReviewsSerch extends Reviews
         ]);
 
         $query->andFilterWhere(['like', 'login', $this->login])
-            ->andFilterWhere(['like', 'password', $this->password])
             ->andFilterWhere(['like', 'reviews_text', $this->reviews_text]);
 
         return $dataProvider;

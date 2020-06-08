@@ -32,7 +32,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'reviews_id',
             'user_id',
             'login',
-            'password',
             'reviews_date',
             'reviews_text',
         ],
