@@ -22,6 +22,7 @@ $config = [
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            'loginUrl' => ['site/index']
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -43,13 +44,15 @@ $config = [
             ],
         ],
         'db' => $db,
+        'assetManager' =>['appendTimestamp' => true],
+        'formatter'=>['dateFormat' => 'dd.MM.yyyy'],
         
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
+        // 'urlManager' => [
+        //     'enablePrettyUrl' => true,
+        //     'showScriptName' => false,
+        //     'rules' => [
+        //     ],
+        // ],
        
     ],
     'params' => $params,
