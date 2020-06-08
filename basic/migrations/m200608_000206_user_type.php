@@ -14,12 +14,11 @@ class m200608_000206_user_type extends Migration
     public function safeUp()
     {
         $this->createTable('user_type',[
-        'user_code'=>Schema::TYPE_PK,
-        'name_code'=>Schema::TYPE_STRING . ' NOT NULL',
-        ]);
-
-        $this->createIndex('idx-post-user_code', 'user_type', 'user_code');
-        $this->addForeignKey('fk-post-user_code', 'user_type', 'user_code','user','user_code', 'CASCADE');
+            'user_code'=>Schema::TYPE_PK,
+            'name_code'=>Schema::TYPE_STRING . ' NOT NULL',
+            ]);
+    
+            $this->addForeignKey('fk-post-user_code', 'user', 'user_code','user_type','user_code', 'CASCADE', 'CASCADE');
     }
 
     /**

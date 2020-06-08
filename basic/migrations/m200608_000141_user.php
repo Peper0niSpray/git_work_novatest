@@ -16,12 +16,11 @@ class m200608_000141_user extends Migration
         $this->createTable('user',[
             'user_id'=>Schema::TYPE_PK,
             'user_code'=>Schema::TYPE_INTEGER . ' NOT NULL',
-            'login'=>Schema::TYPE_STRING . ' NOT NULL',
+            'login'=>$this->string()->notNull(),
             'password'=>Schema::TYPE_STRING . ' NOT NULL',
         ]);
         $this->createIndex('idx-post-user_code', 'user', 'user_code');
-        $this->createIndex('idx-post-user_id', 'user', 'user_id');
-        $this->addForeignKey('fk-post-user_id', 'user', 'user_id','reviews','user_id', 'CASCADE');
+        $this->addForeignKey('fk-post-user_id', 'reviews', 'user_id', 'user', 'user_id', 'CASCADE', 'CASCADE');
     }
 
     /**

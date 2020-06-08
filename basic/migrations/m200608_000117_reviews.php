@@ -16,7 +16,7 @@ class m200608_000117_reviews extends Migration
         $this->createTable('reviews',[
             'reviews_id'=>Schema::TYPE_PK,
             'user_id'=>Schema::TYPE_INTEGER . ' NOT NULL',
-            'login'=>$this->integer()->notNull()->unique(),
+            'login'=>Schema::TYPE_STRING . ' NOT NULL',
             'password'=>Schema::TYPE_STRING . ' NOT NULL',
             'reviews_date'=>Schema::TYPE_DATE . ' NOT NULL',
             'reviews_text'=>Schema::TYPE_STRING . ' NOT NULL',
