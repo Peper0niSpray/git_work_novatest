@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
         <div class="form-group">
             <?= Html::submitButton('Войти', ['class' => 'btn btn-lg btn-success']) ?>
         </div>
-        <?= Html::a('Зарегестрироваться', ['/user/create'], ['class' => '']) ?>
+        <?= Html::a('Зарегистрироваться', ['/user/create'], ['class' => '']) ?>
     <?php ActiveForm::end(); ?>
 
 </div><!-- site-login -->

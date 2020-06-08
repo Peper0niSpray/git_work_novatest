@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\base\User */
 
-$this->title = 'Зарегестрироваться';
+$this->title = 'Зарегистрироваться';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-create">

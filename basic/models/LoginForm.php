@@ -16,8 +16,6 @@ class LoginForm extends Model
     public $login;
     public $password;
 
-    private $_user = false;
-
 
     /**
      * @return array the validation rules.
@@ -55,17 +53,4 @@ class LoginForm extends Model
      * @return bool whether the user is logged in successfully
      */
 
-    /**
-     * Finds user by [[username]]
-     *
-     * @return User|null
-     */
-    public function getUser()
-    {
-        if ($this->_user === false) {
-            $this->_user = Users::findByUsername($this->login);
-        }
-
-        return $this->_user;
-    }
 }
